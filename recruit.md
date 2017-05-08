@@ -1,2 +1,2 @@
-#New Member Hub#
+#New Member Hub
 
