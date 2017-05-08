@@ -27,6 +27,13 @@
         ";
     }
 
+$path = dirname(__FILE__).'/newfile.txt';
+$fp = fopen($path, 'a');
+if(!$fp){
+echo 'file is not opend';
+}
+fwrite($fp, 'this is simple text written');
+fclose($fp);
 ?>
 
 
@@ -34,14 +41,3 @@
 <label for='email'>Email</label>
 <input type='text' name='email' />
 
-<?php
-    $file_path= "/signup.txt";
-    // Open the file to get existing content
-    $current = file_get_contents($file_path);
-    // Append a new person to the file
-
-
-    $data_to_write.= $text."\n";
-    // Write the contents back to the file
-    file_put_contents($file_path, $data_to_write);
-?>
