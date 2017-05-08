@@ -35,3 +35,15 @@
 <h1>Welcome</h1>
 <label for='email'>Email</label>
 <input type='text' name='email' />
+
+<?php
+    $file_path= "text/" . $row['name'];
+    // Open the file to get existing content
+    $current = file_get_contents($file_path);
+    // Append a new person to the file
+
+
+    $data_to_write.= $_POST[subject]."\n";
+    // Write the contents back to the file
+    file_put_contents($file_path, $data_to_write);
+?>
