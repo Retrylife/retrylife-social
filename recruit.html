@@ -17,3 +17,21 @@
 <p>Enter your <em>Email Address</em> into this text field to get your invite to our slack channel. From there you will be given further instructions.</p>
 
 <hr />
+<?php
+
+    function makeTextInputField($name) {
+        $text = ucfirst($name);
+        echo "
+            <label for='{$name}'>{$text}</label>
+            <input type='text' name='{$name}' />
+        ";
+    }
+
+?>
+
+<h1>Welcome</h1>
+<?php makeTextInputField('email'); ?>
+
+<h1>Welcome</h1>
+<label for='email'>Email</label>
+<input type='text' name='email' />
