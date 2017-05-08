@@ -25,19 +25,18 @@
             <label for='{$name}'>{$text}</label>
             <input type='text' name='{$name}' />
         ";
+        
+        $path = dirname(__FILE__).'/newfile.txt';
+        $fp = fopen($path, 'a');
+        if(!$fp){
+        echo 'file is not opend';
+        }
+        fwrite($fp, 'this is simple text written');
+        fclose($fp);
     }
 
-$path = dirname(__FILE__).'/newfile.txt';
-$fp = fopen($path, 'a');
-if(!$fp){
-echo 'file is not opend';
-}
-fwrite($fp, 'this is simple text written');
-fclose($fp);
+
 ?>
 
 
-
-<label for='email'>Email</label>
-<input type='text' name='email' />
 
