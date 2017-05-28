@@ -112,6 +112,19 @@
   <br>
   <br>
       <h1></h1>
+      <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script>
+$.getJSON('https://api.twitch.tv/kraken/streams/retrylife', function(channel) {
+
+    if (channel["stream"] == null) { 
+        window.alert("nie wow");
+
+    } else {
+        window.alert("wow");
+    
+    }
+});
+</script>
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLZEIYzmeiF3FmhUze7ZxXIdWQu2GD0opk" frameborder="0" allowfullscreen=""></iframe></div>
     <div id="ytsub" align="center" background-color: red;>
       
